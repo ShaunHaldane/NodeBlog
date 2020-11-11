@@ -1,0 +1,30 @@
+<!-- Contact -->
+<section id="social" class="section footer-section">
+    <div class="container">
+        <div class="has-text-centered">
+            <h1>Phone Number: 0049 152 373 292 54<br>
+                Email Adress: <a href="mailto:shaun.haldane@gmail.com">shaun.haldane@gmail.com</a></h1>
+
+        </div>
+    </div>
+</section>
+
+<!-- Scripts  -->
+<script>
+
+    window.onload = () => {
+        const navMenu = document.querySelector('.nav-menu');
+        const navItems = document.querySelectorAll('.nav-item');
+        const hamburger = document.querySelector('.nav-toggle');
+
+        const toggle = e => e.classList.toggle('is-active');
+        const toggleNav = ({ target }) => Array.from(navMenu.classList).includes('is-active') ? toggle(navMenu) : null;
+
+        hamburger.addEventListener('click', () => toggle(navMenu, 'is-active'));
+        Array.from(navItems).forEach(e => e.addEventListener('click', toggleNav))
+    }
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<%- include("partials/header"); -%>
+
+<div class="projects-title">
+    <h1>Articles</h1>
+</div>
+
+
+<% posts.forEach(function(post){ %>
+<h2><%= post.title %></h2>
+<p><%= post.content %></p>
+<a href="/posts/<%= post._id %>">Read More</a>
+<% }) %>
+
+<%- include("partials/footer"); -%>
